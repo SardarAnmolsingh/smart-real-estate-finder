@@ -37,7 +37,7 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Find the Best Property Deals Using AI & Big Data
+                Find the Best Property Deals Using Artificial Intelligence
               </h1>
               <p className="text-xl md:text-2xl mb-10 text-blue-50">
                 Get smarter real estate recommendations with our AI-powered price analysis and market trend predictions.
