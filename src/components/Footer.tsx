@@ -20,7 +20,7 @@ const Footer = () => {
                   <path d="M17 11V17" stroke="white" strokeWidth="2" />
                 </svg>
               </div>
-              <span className="text-xl font-bold text-real-gray-900">PropertyAI</span>
+              <span className="text-xl font-bold text-real-gray-900">NivaasAI</span>
             </Link>
             <p className="text-real-gray-600 mb-6">
               Finding the best property deals using AI & big data analytics
@@ -89,7 +89,7 @@ const Footer = () => {
 
         <div className="mt-12 pt-6 border-t border-real-gray-200">
           <p className="text-center text-real-gray-500">
-            &copy; {currentYear} PropertyAI. All rights reserved.
+            &copy; {currentYear} NivaasAI. All rights reserved.
           </p>
         </div>
       </div>

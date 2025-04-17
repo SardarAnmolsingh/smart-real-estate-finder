@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
@@ -29,7 +28,7 @@ const Header = () => {
               <path d="M17 11V17" stroke="white" strokeWidth="2" />
             </svg>
           </div>
-          <span className="text-xl font-bold text-real-gray-900">PropertyAI</span>
+          <span className="text-xl font-bold text-real-gray-900">NivaasAI</span>
         </Link>
 
         {/* Desktop Navigation */}
