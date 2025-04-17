@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Map, Calendar, Home, TrendingUp, TrendingDown, Minus, BarChart2 } from "lucide-react";
@@ -13,7 +12,6 @@ const PropertyDetails = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate API call
     setLoading(true);
     setTimeout(() => {
       const foundProperty = properties.find(p => p.id === id);
@@ -100,13 +98,11 @@ const PropertyDetails = () => {
       
       <main className="flex-grow bg-gray-50">
         <div className="container mx-auto px-4 py-8">
-          {/* Back Button */}
           <Link to="/search" className="inline-flex items-center text-real-gray-600 hover:text-real-blue mb-6">
             <ArrowLeft size={16} className="mr-2" />
             Back to Search Results
           </Link>
 
-          {/* Property Header */}
           <div className="bg-white rounded-lg shadow-md p-6 mb-8">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">{property.name}</h1>
             <p className="text-real-gray-600 mb-4">
@@ -120,9 +116,7 @@ const PropertyDetails = () => {
             </div>
           </div>
 
-          {/* Main Content */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column (Images) */}
             <div className="lg:col-span-2">
               <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
                 <img 
@@ -132,7 +126,6 @@ const PropertyDetails = () => {
                 />
               </div>
 
-              {/* Property Description */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
                 <h2 className="text-xl font-semibold mb-4">Description</h2>
                 <p className="text-real-gray-600 mb-6">{property.description}</p>
@@ -148,7 +141,6 @@ const PropertyDetails = () => {
                 </div>
               </div>
 
-              {/* Price Analysis Chart */}
               <div className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center mb-4">
                   <BarChart2 size={24} className="text-real-blue mr-2" />
@@ -161,9 +153,7 @@ const PropertyDetails = () => {
               </div>
             </div>
 
-            {/* Right Column (Property Details) */}
             <div>
-              {/* Price Card */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
                 <div className="mb-4">
                   <h2 className="text-lg font-semibold">Price Information</h2>
@@ -203,7 +193,6 @@ const PropertyDetails = () => {
                 </div>
               </div>
 
-              {/* Property Details Card */}
               <div className="bg-white rounded-lg shadow-md p-6 mb-8">
                 <div className="mb-4">
                   <h2 className="text-lg font-semibold">Property Details</h2>
@@ -246,7 +235,7 @@ const PropertyDetails = () => {
                       <div className="flex items-center">
                         <div className="w-5 h-5 mr-3 flex items-center justify-center text-real-gray-400">
                           <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M5 2a1 1 0 011-1h8a1 1 0 011 1v1h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v2a1 1 0 01-1 1h-3v1h2a1 1 0 110 2h-6a1 1 0 110-2h2v-1H7a1 1 0 01-1-1V8H5a1 1 0 01-1-1V4a1 1 0 011-1h1V2zm2 0v1h6V2H7zm6 5V4H7v3h6z" clipRule="evenodd" />
+                            <path fillRule="evenodd" d="M5 2a1 1 0 011-1h8a1 1 0 011 1v1h1a1 1 0 011 1v3a1 1 0 01-1 1h-1v2a1 1 0 110 2h-6a1 1 0 110-2h2v-1H7a1 1 0 01-1-1V8H5a1 1 0 01-1-1V4a1 1 0 011-1h1V2zm2 0v1h6V2H7zm6 5V4H7v3h6z" clipRule="evenodd" />
                           </svg>
                         </div>
                         <div>
@@ -265,17 +254,6 @@ const PropertyDetails = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Call to Action */}
-              <div className="bg-real-blue-light rounded-lg p-6 text-center">
-                <h3 className="text-lg font-semibold text-real-blue-dark mb-2">
-                  {isPriceBelowMarket ? 'Great Deal! Act Fast' : 'Interested in this property?'}
-                </h3>
-                <p className="text-real-gray-700 mb-4">
-                  Contact us for more information or to schedule a viewing.
-                </p>
-                <button className="btn-primary w-full">Contact Agent</button>
               </div>
             </div>
           </div>
