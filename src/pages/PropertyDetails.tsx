@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, Map, Calendar, Home, TrendingUp, TrendingDown, Minus, BarChart2 } from "lucide-react";
@@ -21,9 +22,9 @@ const PropertyDetails = () => {
   }, [id]);
 
   const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("en-US", {
+    return new Intl.NumberFormat("en-IN", {
       style: "currency",
-      currency: "USD",
+      currency: "INR",
       maximumFractionDigits: 0,
     }).format(price);
   };
